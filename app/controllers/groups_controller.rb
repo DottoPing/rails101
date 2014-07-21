@@ -10,14 +10,14 @@ class GroupsController < ApplicationController
   end 
 
   def show
-    @group = Group.params[:id]
+    @group = Group.find(params[:id])
     @posts = @group.posts
   end
 
   def create
     @group = current_user.groups.build(group_params)
     if @group.save
-      #current_user.join!(@group)
+      current_user.join!(@group)
       redirect_to groups_path
     else
       render :new

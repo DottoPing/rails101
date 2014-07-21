@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.text :content
       t.integer :group_id
+      t.integer :user_id
 
       t.timestamps
     end

@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = @group.posts.new(posts_params)
+    @post = @group.posts.new(post_params)
     @post.author = current_user
 
     if @post.save
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
 
   private
 
-  def posts_params
+  def post_params
     params.require(:post).permit(:content)
   end
 
