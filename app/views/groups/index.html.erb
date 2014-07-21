@@ -25,10 +25,10 @@
     <td> <%= group.owner.name %> </td>
 
     <td> 
-      <%# if current_user && froup.editable_by?(current_user) %>
+      <% if current_user && group.editable_by?(current_user) %>
         <%= link_to("Edit", edit_group_path(group), :class => "btn btn-mini") %>
       <%= link_to("Delete", group_path(group), :class => "btn btn-mini", :method => :delete, :confirm => "Are you sure?" ) %>
-    <%# end %>
+    <% end %>
     </td>
   </tr>
   <% end %>

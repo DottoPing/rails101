@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.build(group_params)
     if @group.save
-      current_user.join!(@group)
+      #current_user.join!(@group)
       redirect_to groups_path
     else
       render :new
@@ -25,7 +25,7 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = current_user.groups.find(params[:_id])
+    @group = current_user.groups.find(params[:id])
   end
 
   def update
@@ -39,7 +39,7 @@ class GroupsController < ApplicationController
   end  
 
   def destroy
-    @group = current_user.groups.find(params[:id])
+    @post = current_user.groups.find(params[:id])
 
     @post.destroy
 
