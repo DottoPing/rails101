@@ -9,4 +9,6 @@ class Post < ActiveRecord::Base
     user && user == author
   end
 
+  scope :recent, -> { order("updated_at DESC")}
+  scope :published, -> { where(:published => true) }
 end
