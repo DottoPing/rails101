@@ -262,6 +262,7 @@ DEPENDENCIES
   omniauth-facebook
   open_graph_helper
   powder
+  pry
   pry-nav
   pry-remote
   rails (= 4.0.0)

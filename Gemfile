@@ -50,7 +50,7 @@ gem "auto-facebook", "0.4"
 gem "whenever"
 
 gem "hipchat"
-
+gem "pry"
 # Cache
 gem "dalli"
 
